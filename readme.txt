@@ -38,3 +38,7 @@ x- Lu
 -- Qr
 -- Schur
 -- interpolative
+
+roadmap
+----------------------------------
+-- Determinant
