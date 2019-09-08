@@ -1,28 +1,41 @@
 initialize
--- indentity matrix
--- matrix of ones
--- matrix of zeroes
--- vector of ones
--- vector of zeroes
-basic operations
--- gaussian elimination
+----------------------------------
+x- indentity matrix
+x- matrix of ones
+x- matrix of zeroes
+x- vector of ones
+x- vector of zeroes
+
+functions
+----------------------------------
+x- gaussian elimination
+o- transpose
 -- inverse
--- transpose
 -- dot
 -- min/max
--- generalized inverse
 -- determinant
+---- lu
+---- bareiss
 -- solve
+xx-- gauss_elimination
 -- norm
+
+basic operations
+----------------------------------
+-- add
+-- subtract
+-- multiply
+-- divide
+-- trignometric
+-- log
+
 decomposition
+----------------------------------
 -- eigen value
 -- eigen vector
 -- singular value
--- Lu
+x- Lu
 -- cholesky
 -- Qr
 -- Schur
 -- interpolative
-functions
--- trignometric
--- log
