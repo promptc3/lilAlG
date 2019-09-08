@@ -1,25 +1,6 @@
 #include <stdio.h>
 #include "utils.h"
 
-int main()
-{ }
-
-void r_init_mat(double **matrix, int row, int column)
-{
-	scanf("%d %d", &row, &column);
-	for (int i=0; i < row; ++i) {
-		for (int j=0; j < column; ++j)
-			scanf("%lf", &matrix[i][j]);
-	}
-}
-
-void r_init_vec(double *vector, int size)
-{
-	scanf("%d", &size);
-	for (int i = 0; i < size; ++i)
-		scanf("%lf", &vector[i]);
-}
-
 /* Convert to upper triangular */
 void r_upptri(double** mat, double y[], int r, int c)
 {
@@ -50,6 +31,7 @@ void r_upptri(double** mat, double y[], int r, int c)
 double* r_bacsub(double** mat, double y[], int r, int c)
 {
 	double ans[r];
+	double *p_ans;
 	ans[r-1] = y[r-1];
 	for (int i = r-2; i >= 0; --i) {
 		double sum = 0;
@@ -57,6 +39,31 @@ double* r_bacsub(double** mat, double y[], int r, int c)
 			sum += ans[j]*mat[i][j];
 		ans[i] = y[i] - sum;
 	}
+	p_ans = ans;
 
-	return *ans;
+	return p_ans;
 }
+
+int max_vec(double *vector, int s)
+{
+	double t_max = 0;int i_max = 0;
+	for (int i=0; i < s; ++i) {
+		if (vector[i] > t_max) {
+			t_max = vector[i];
+			i_max = i;
+		}
+	}
+	return i_max;
+}
+
+void swap_vec(double *a, double *b, int s)
+{
+	double temp;
+	for(int i = 0; i < s; i++)
+	{
+		temp = a[i];
+		a[i] = b[i];
+		b[i] = temp;
+	}
+}
+
