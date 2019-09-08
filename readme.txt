@@ -1,6 +1,9 @@
 initialize
--- vector
--- 2d/3d array
+-- indentity matrix
+-- matrix of ones
+-- matrix of zeroes
+-- vector of ones
+-- vector of zeroes
 basic operations
 -- gaussian elimination
 -- inverse
