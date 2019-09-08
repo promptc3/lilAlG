@@ -1,4 +1,4 @@
-initialize
+initialize : init.x
 ----------------------------------
 x- indentity matrix
 x- matrix of ones
@@ -6,12 +6,13 @@ x- matrix of zeroes
 x- vector of ones
 x- vector of zeroes
 
-functions
+functions : function.x
 ----------------------------------
 x- gaussian elimination
-o- transpose
 -- inverse
 -- dot
+-- cross
+-- adjoint
 -- min/max
 -- determinant
 ---- lu
@@ -20,14 +21,12 @@ o- transpose
 xx-- gauss_elimination
 -- norm
 
-basic operations
+basic operations : operator.x
 ----------------------------------
--- add
--- subtract
--- multiply
--- divide
--- trignometric
--- log
+x- add
+x- subtract
+x- multiply
+x- divide
 
 decomposition
 ----------------------------------
