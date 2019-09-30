@@ -1,23 +1,26 @@
 # mylinalg - Simple Linear Algebra Library
 # AUTHOR: @datsleepyguy
 
-SRC = gael.c
-OBJ = $(SRC:.c=.o)
-CC = /usr/bin/gcc
-CFLAGS = -Wall -Werror -02
-CDFLAGS = -Wall -Werror -g
+CC = gcc
+CFLAGS = -fPIC -Wall -Werror
+CDFLAGS = $(CFLAGS) -g
+LDFLAGS = -shared
+NAME = mylinalg
+TARGET_LIB = $(NAME).so
+LPATH := $(shell pwd)
 
-lu :
-	cc $(CDFLAGS) lu_decompose.c -o bin/lu_decompose.o
+SRC := $(wildcard src/*.c)
+FILENAMES := $(basename $(notdir $(SRC)))
+OBJS := $(wildcard bin/*.o)
 
-init.o : init.h
-	cc -c $(CFLAGS) init.c
+all:
+	for i in $(FILENAMES); do \
+		$(CC) $(CFLAGS) -o bin/$$i.o -c src/$$i.c; \
+	done
+	$(CC) $(LDFLAGS) -o $(TARGET_LIB) $(OBJS) -lm
 
-main : init.h
-	cc $(CDFLAGS) init.o main.c -o bin/main.o
-
-test :
-	init.o main.o
+test:
+	$(CC) $(CDFLAGS) -L$(LPATH) test.c -l$(NAME) -o test
 
 clean :
-	rm gael.o
+	rm -f $(OBJ) libmylinalg.so
