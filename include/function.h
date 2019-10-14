@@ -1,3 +1,5 @@
+#ifndef _FUCNTION_H_
+#define _FUCNTION_H_
 /* initialize a matrix of size row X column */
 void r_init_mat(double **matrix, int row, int column);
 
@@ -15,3 +17,4 @@ void swap_vec(double *a, double *b, int s);
 
 /* find max element in a vector */
 int max_vec(double *vector, int s);
+#endif

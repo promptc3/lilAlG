@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "utils.h"
+#include "../include/function.h"
 
 /* Convert to upper triangular */
 void r_upptri(double** mat, double y[], int r, int c)

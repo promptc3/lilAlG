@@ -1,15 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "utils.h"
+#include "../include/function.h"
 
-int main()
+void gael(double** mat, double* y, int n, int m);
+
+void gael(double** mat, double* y, int n, int m)
 {
-	/* get rows ans columns */
-	int n, m;
-	double** mat, y[n];
-	init_mat(mat, n, m);
-	init_vec(y, n);
-
 	/* throw error if number of eqns is less than no of vars */
 	if (m > n) {
 		fprintf(stderr, "No Possible Solution\n");
@@ -17,10 +13,9 @@ int main()
 	}
 
 	/* perform triangularizarion */
-	trnglrz(mat, y, n, m);
+	r_upptri(mat, y, n, m);
 
 	/* perform back substitution */
-	back_subs(mat, y, n, m);
+	r_bacsub(mat, y, n, m);
 
-	return 0;
 }

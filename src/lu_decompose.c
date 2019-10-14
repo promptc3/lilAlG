@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "utils.h"
-#define MAX 50
 
 void lupdec(double **mat, int r, int c);
 

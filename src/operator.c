@@ -1,4 +1,6 @@
-#inlcude "operator.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "../include/operator.h"
 /* Add */
 void add(double **mat1, double **mat2, int r, int c)
 {
@@ -43,7 +45,7 @@ void mat_mult(double **mat1, double **mat2, int n, int m, int p)
 }
 
 /* Divide */
-void div(double **mat1, double **mat2, int r, int c)
+void mat_div(double **mat1, double **mat2, int r, int c)
 {
 	for (int i = 0; i < r; ++i) {
 		for (int j = 0; j < c; ++j) {
@@ -52,7 +54,8 @@ void div(double **mat1, double **mat2, int r, int c)
 	}
 }
 
-double dot(double vec1, double vec2, int size)
+/* Dot Product*/
+double dot(double *vec1, double *vec2, int size)
 {
 	double sum = 0.0;
 	for (int i = 0; i < size; ++i) {
@@ -61,7 +64,8 @@ double dot(double vec1, double vec2, int size)
 	return sum;
 }
 
-double cross(double vec1, double vec2, int size)
+/* Cross Product */
+double cross(double *vec1, double *vec2, int size)
 {
 	double sum = 0.0;
 	if (size == 2) {
@@ -73,7 +77,10 @@ double cross(double vec1, double vec2, int size)
 		ans[0] = vec1[1]*vec2[2] - vec1[2]*vec2[1];
 		ans[1] = vec1[2]*vec2[0] - vec1[0]*vec2[2];
 		ans[2] = vec1[0]*vec2[1] - vec1[1]*vec2[0];
-		return 0;
+		sum = ans[0] + ans[1] + ans[2];
+		return sum;
 	}
 	else { fprintf(stderr, "Cross exists for vector upto size 3"); }
+
+	return 0;
 }

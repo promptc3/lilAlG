@@ -1,0 +1,6 @@
+Sparse Matrix
+-- Row Linked List Form
+-- Row Node
+--- row number, down, next
+-- Element Node
+--- column number, value, next

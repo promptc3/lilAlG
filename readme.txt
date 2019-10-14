@@ -1,5 +1,6 @@
 roadmap
 ----------------------------------
+-- write free funcs
 -- complete lu det and solve functions
 -- add determinant and solve to functions.x
 -- complete functions.x
