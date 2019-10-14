@@ -19,11 +19,11 @@ $ make test
 ```
 Test discovery finished, found 3 tests.
 
-[InitZeroTest : TestLibraryInitializesZeroMatrices] PASSED 
+[InitZeroTest : TestLibraryInitializesZeroMatrices] PASSED
 
-[InitOnesTest : TestLibraryInitializesOnesMatrices] PASSED 
+[InitOnesTest : TestLibraryInitializesOnesMatrices] PASSED
 
-[InitIdentityTest : TestLibraryInitializesIdentityMatrices] PASSED 
+[InitIdentityTest : TestLibraryInitializesIdentityMatrices] PASSED
 ```
 
 |  PASSED  |  SKIPPED  |  FAILED  |
