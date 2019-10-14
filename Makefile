@@ -9,6 +9,8 @@ NAME = mylinalg
 TARGET_LIB = lib$(NAME).so
 LPATH := $(shell pwd)
 
+TEST := $(wildcard tests/*.c)
+
 SRC := $(wildcard src/*.c)
 FILENAMES := $(basename $(notdir $(SRC)))
 OBJS := $(wildcard bin/*.o)
@@ -20,7 +22,7 @@ all:
 	$(CC) $(LDFLAGS) -o $(TARGET_LIB) $(OBJS) -lm
 
 test:
-	$(CC) $(CDFLAGS) -L$(LPATH) test.c -l$(NAME) -o test
-
+	$(CC) $(CFLAGS) -L$(LPATH) -Wl,-rpath=$(LPATH) $(TEST) -l$(NAME) -o tests/test
+	./tests/test
 clean :
 	rm -f $(OBJ) libmylinalg.so
