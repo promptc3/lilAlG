@@ -1,8 +1,8 @@
 # LiL Al G
 
 ## Basic Linear Algebra Library
------------------------------
 The library you don't need and definitely don't deserve.
+-----------------------------
 
 ## Build
 Build shared dynamic library object
@@ -16,7 +16,7 @@ $ make test
 ```
 
 ## Test Summary
-
+```
 Test discovery finished, found 3 tests.
 
 [InitZeroTest : TestLibraryInitializesZeroMatrices] PASSED 
@@ -24,12 +24,11 @@ Test discovery finished, found 3 tests.
 [InitOnesTest : TestLibraryInitializesOnesMatrices] PASSED 
 
 [InitIdentityTest : TestLibraryInitializesIdentityMatrices] PASSED 
+```
 
------------------------------------
 |  PASSED  |  SKIPPED  |  FAILED  |
------------------------------------
+|----------|-----------|----------|
 |  3       |  0        |  0       |
------------------------------------
 
 ## License
 Basic Linear Algebra Library
