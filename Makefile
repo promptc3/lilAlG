@@ -6,7 +6,7 @@ CFLAGS = -fPIC -Wall -Werror
 CDFLAGS = $(CFLAGS) -g
 LDFLAGS = -shared
 NAME = mylinalg
-TARGET_LIB = $(NAME).so
+TARGET_LIB = lib$(NAME).so
 LPATH := $(shell pwd)
 
 SRC := $(wildcard src/*.c)
