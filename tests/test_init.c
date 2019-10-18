@@ -18,6 +18,10 @@ TEST (InitZeroTest, TestLibraryInitializesZeroMatrices)
 			ASSERT_EQ(mat[i][j], 0);
 		}
 	}
+
+	for (int i = 0; i < r; ++i)
+		free(mat[i]);
+
 	free(mat);
 }
 
@@ -36,6 +40,11 @@ TEST (InitOnesTest, TestLibraryInitializesOnesMatrices)
 			ASSERT_EQ(mat1[i][j], 1);
 		}
 	}
+
+	for (int i = 0; i < r; ++i)
+		free(mat1[i]);
+
+	free(mat1);
 }
 
 TEST (InitIdentityTest, TestLibraryInitializesIdentityMatrices)
@@ -53,4 +62,9 @@ TEST (InitIdentityTest, TestLibraryInitializesIdentityMatrices)
 			else { ASSERT_EQ(mati[i][j], 0); }
 		}
 	}
+
+	for (int i = 0; i < r; ++i)
+		free(mati[i]);
+
+	free(mati);
 }

@@ -42,6 +42,11 @@ void mat_mult(double **mat1, double **mat2, int n, int m, int p)
 			}
 		}
 	}
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < p; ++j) {
+			mat1[i][j] = ans[i][j];
+		}
+	}
 }
 
 /* Divide */
