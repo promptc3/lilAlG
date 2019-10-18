@@ -1,6 +1,4 @@
-# LiL Al G
-
-## Basic Linear Algebra Library
+# LiL Al G : Basic Linear Algebra Library
 The library you don't need and definitely don't deserve.
 -----------------------------
 
