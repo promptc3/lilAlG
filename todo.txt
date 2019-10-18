@@ -1,6 +1,5 @@
 roadmap
 ----------------------------------
--- write program for Cholesky Decomposition
 -- write tests for function.c
 
 initialize : init.x
@@ -14,13 +13,12 @@ xx vector of zeroes
 
 functions : function.x
 ----------------------------------
--- linear map
+xx linear map
 xx min/max
 xx bareiss
 xx swap vector
 xx convert to upper triangular
 xx perform back substitution
--- norm
 
 basic operations : operator.x
 ----------------------------------
@@ -35,9 +33,12 @@ decomposition
 ----------------------------------
 -- eigen value
 -- eigen vector
+-- power method
+-- Qr
+-- shifting technique
 -- singular value
 x- Lu
--- cholesky
--- Qr
+x- cholesky
 -- Schur
 -- interpolative
+-- norm
