@@ -5,7 +5,7 @@ The library you don't need and definitely don't deserve.
 -----------------------------
 
 ## Build
-Build shared dynamic library object
+Build `./libmylinalg.so`
 ```
 $ make
 ```
