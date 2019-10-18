@@ -2,7 +2,7 @@
 #include "../include/function.h"
 
 /* Convert to upper triangular */
-void r_upptri(double** mat, double y[], int r, int c)
+void upptrngl(double** mat, double y[], int r, int c)
 {
 	for (int i = 0; i < r; ++i) {
 		double pivot = mat[i][i];
@@ -28,7 +28,7 @@ void r_upptri(double** mat, double y[], int r, int c)
 }
 
 /* Perform back substitution */
-double* r_bacsub(double** mat, double y[], int r, int c)
+double* bcksb(double** mat, double y[], int r, int c)
 {
 	double ans[r];
 	double *p_ans;
@@ -56,7 +56,19 @@ int max_vec(double *vector, int s)
 	return i_max;
 }
 
-void swap_vec(double *a, double *b, int s)
+int min_vec(double *vector, int s)
+{
+	double t_max = INT_MAX;int i_max = 0;
+	for (int i=0; i < s; ++i) {
+		if (vector[i] < t_max) {
+			t_max = vector[i];
+			i_max = i;
+		}
+	}
+	return i_max;
+}
+
+void swp_vec(double *a, double *b, int s)
 {
 	double temp;
 	for(int i = 0; i < s; i++)
@@ -67,3 +79,29 @@ void swap_vec(double *a, double *b, int s)
 	}
 }
 
+void det(mat, r, c)
+{
+	double div = 1.0;
+	for (int k = 0; k < r-1; k++) {
+		for (int i = k+1; i < r; i++) {
+			if (k != i) {
+				for (int j = k+1; j < c; j++) {
+					if (k == 0) { div = 1.0; }
+					else { div = mat[k-1][k-1]; }
+					double temp = 0;
+					temp = ((mat[i][j]*mat[k][k])- (mat[i][k]*mat[k][j]));
+					mat[i][j] = temp/div;
+				}
+			}
+		}
+	}
+}
+
+void mmap(mat, r, c, v)
+{
+	for (int i = 0; i < r; ++i) {
+		for (int j = 0; j < c; ++j) {
+			mat[i][j] *= v;
+		}
+	}
+}
