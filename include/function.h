@@ -25,4 +25,8 @@ void det(double** matrix, int row, int column);
 /* Map the matrix with a number */
 void mmap(double** matrix, int row, int column, double val);
 
+/* Cholesky Decomposition */
+/* Saves the answer in the input matrix itself */
+void cholesky(double** matrix, int n);
+
 #endif

@@ -1,6 +1,41 @@
 #include <stdio.h>
+#include <math.h>
+#include <limits.h>
 #include "../include/function.h"
 
+/* Cholesky Decomposition */
+void cholesky(double** mat, int n)
+{
+	double ans[n][n];
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; j++) {
+			ans[i][j] = 0;
+		}
+	}
+
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0;  j < i; ++j) {
+			
+			double sum = 0;
+			if (i == j) {
+				for (int k = 0; k < j; ++k)
+					sum += pow(ans[j][k], 2);
+				ans[j][j] = sqrt(mat[j][j] - sum);
+			}
+			else {
+				for (int k = 0; k < j; ++k)
+					sum += (ans[i][k]*ans[j][k]);
+				ans[i][j] = (mat[i][j] - sum) / ans[j][j];
+			}
+		}
+	}
+
+	for(int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {	
+			mat[i][j] = ans[i][j];
+		}
+	}
+}
 /* Convert to upper triangular */
 void upptrngl(double** mat, double y[], int r, int c)
 {
@@ -79,7 +114,7 @@ void swp_vec(double *a, double *b, int s)
 	}
 }
 
-void det(mat, r, c)
+void det(double** mat, int r, int c)
 {
 	double div = 1.0;
 	for (int k = 0; k < r-1; k++) {
@@ -97,7 +132,7 @@ void det(mat, r, c)
 	}
 }
 
-void mmap(mat, r, c, v)
+void mmap(double** mat, int r, int c, double v)
 {
 	for (int i = 0; i < r; ++i) {
 		for (int j = 0; j < c; ++j) {
