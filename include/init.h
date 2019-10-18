@@ -1,5 +1,5 @@
-#ifndef INIT_H_INCLUDED
-#define INIT_H_INCLUDED
+#ifndef _LILALG_INIT_H_
+#define _LILALG_INIT_H_
 /* init.h : Initialize 
  * Functions to initialize a matrix and vectors */
 

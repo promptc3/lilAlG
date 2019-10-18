@@ -1,5 +1,5 @@
-#ifndef _OPERATOR_H_
-#define _OPERATOR_H_
+#ifndef _LILALG_OPERATOR_H_
+#define _LILALG_OPERATOR_H_
 /* Add */
 void add(double **mat1, double **mat2, int r, int c);
 
