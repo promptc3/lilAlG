@@ -1,40 +1,35 @@
 roadmap
 ----------------------------------
--- complete lu det and solve functions
--- add determinant and solve to functions.x
--- complete functions.x
+-- write program for Cholesky Decomposition
+-- write tests for function.c
 
 initialize : init.x
 ----------------------------------
-x- indentity matrix
-x- matrix of ones
-x- matrix of zeroes
-x- vector of ones
-x- vector of zeroes
+xx indentity matrix
+xx matrix of ones
+xx matrix of zeroes
+xx vector of ones
+xx vector of zeroes
+-- matrix with random numbers
 
 functions : function.x
 ----------------------------------
-x- gaussian elimination
 -- linear map
--- inverse
--- adjoint
--- min/max
--- determinant
----- lu
-xx-- bareiss
--- solve
-xx-- gauss_elimination
----- lu
+xx min/max
+xx bareiss
+xx swap vector
+xx convert to upper triangular
+xx perform back substitution
 -- norm
 
 basic operations : operator.x
 ----------------------------------
-x- add
-x- subtract
-x- multiply
-x- divide
-x- dot
-x- cross
+xx add
+xx subtract
+xx multiply
+xx divide
+xx dot
+xx cross
 
 decomposition
 ----------------------------------

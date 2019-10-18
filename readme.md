@@ -19,39 +19,22 @@ $ make test
 
 ### Test Init
 ```
-[InitZeroTest : TestLibraryInitializesZeroMatrices] PASSED
-
-[InitOnesTest : TestLibraryInitializesOnesMatrices] PASSED
-
+[InitZeroTest     : TestLibraryInitializesZeroMatrices]     PASSED
+[InitOnesTest     : TestLibraryInitializesOnesMatrices]     PASSED
 [InitIdentityTest : TestLibraryInitializesIdentityMatrices] PASSED
 ```
-
-|  PASSED  |  SKIPPED  |  FAILED  |
-|----------|-----------|----------|
-|  3       |  0        |  0       |
-
 ### Test Operator
 ```
-[Add : AddTwoMatrices] PASSED
-
-[Subtract : SubtractTwoMatrices] PASSED
-
-[Multiply : MultiplyElementWiseTwoMatrices] PASSED
-
-[Matrix_Multiply : MultiplyTwoMatrices] PASSED
-
-[Matrix_Divsion : DivideElementWiseTwoMatrices] PASSED
-
-[InitZeroTest : TestLibraryInitializesZeroMatrices] PASSED
-
-[InitOnesTest : TestLibraryInitializesOnesMatrices] PASSED
-
-[InitIdentityTest : TestLibraryInitializesIdentityMatrices] PASSED
+[Add             : AddTwoMatrices]                 PASSED
+[Subtract        : SubtractTwoMatrices]            PASSED
+[Multiply        : MultiplyElementWiseTwoMatrices] PASSED
+[Matrix_Multiply : MultiplyTwoMatrices]            PASSED
+[Matrix_Divsion  : DivideElementWiseTwoMatrices]   PASSED
 ```
 
 |  PASSED  |  SKIPPED  |  FAILED  |
 |----------|-----------|----------|
-|    8     |  0        |  0       |
+|  8       |  0        |  0       |
 
 ## License
 Basic Linear Algebra Library
